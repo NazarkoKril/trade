@@ -13,13 +13,98 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="./img/fav.svg" type="image/x-icon">
     <title>Trader GP Official Launch</title>
 </head>
 
 <body>
     <header>
-
+        <div class="container">
+            <div class="header_container">
+                <a class="logo" href="./">
+                    <img src="./img/logo.svg" alt="logo company">
+                </a>
+                <div class="right">
+                    <a class="header__link" href="#">Start Free Trial</a>
+                    <a href="#" class="btn">
+                        <p>Join January Competition</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <rect x="0.5" y="0.5" width="19" height="19" rx="4.5" fill="#0A0A0A" stroke="#9DF501" />
+                            <path
+                                d="M13.7408 7.23694C13.7408 6.9608 13.517 6.73694 13.2408 6.73694L8.74085 6.73694C8.4647 6.73694 8.24085 6.9608 8.24085 7.23694C8.24085 7.51308 8.4647 7.73694 8.74085 7.73694L12.7408 7.73694L12.7408 11.7369C12.7408 12.0131 12.9647 12.2369 13.2408 12.2369C13.517 12.2369 13.7408 12.0131 13.7408 11.7369L13.7408 7.23694ZM7.58988 13.595L13.5944 7.59049L12.8873 6.88338L6.88277 12.8879L7.58988 13.595Z"
+                                fill="#9DF501" />
+                        </svg>
+                    </a>
+                    <a class="lang" href="./indexJP.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M14 8C14 9.5913 13.3679 11.1174 12.2426 12.2426C11.1174 13.3679 9.5913 14 8 14M14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2M14 8H2M8 14C6.4087 14 4.88258 13.3679 3.75736 12.2426C2.63214 11.1174 2 9.5913 2 8M8 14C9.28867 14 10.3333 11.3133 10.3333 8C10.3333 4.68667 9.28867 2 8 2M8 14C6.71133 14 5.66667 11.3133 5.66667 8C5.66667 4.68667 6.71133 2 8 2M8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8"
+                                stroke="white" stroke-width="1.16667" stroke-linejoin="round" />
+                        </svg>
+                        <p>JP</p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
+    <main>
+        <section class="sect_timer">
+            <div class="container">
+                <div class="box_info">
+                    <span class="title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                            <circle cx="4" cy="4.5" r="4" fill="#9DF501" />
+                        </svg>
+                        <h5>MT4 / MT5 Prop Firm</h5>
+                    </span>
+                    <h1>Trader GP Official Launch</h1>
+                    <h3>Time is running out! Enter before <b>[insert date]</b> to qualify for the giveaway!</h3>
+                    <div class="countdown">
+                        <div class="time-box">
+                            <span id="days" class="time-value">00</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        .tim
+                        <div class="time-box">
+                            <span id="hours" class="time-value">00</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-box">
+                            <span id="minutes" class="time-value">00</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-box">
+                            <span id="seconds" class="time-value">00</span>
+                            <span class="time-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const countdownDate = new Date("Jan 15, 2025 00:00:00").getTime();
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            if (distance >= 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+                document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+                document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+                document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            } else {
+                document.querySelector('.countdown').innerHTML = "The countdown has ended!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); 
+    </script>
 </body>
 
 </html>
