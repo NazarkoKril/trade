@@ -252,7 +252,7 @@ header {
     max-width: 680px;
     margin-bottom: 40px;
   }
-  h3 {
+  p {
     color: var(--White, #fff);
     text-align: center;
     font-family: Montserrat;
@@ -343,7 +343,7 @@ header {
     width: 100%;
     max-width: 420px;
     padding-left: 12px;
-    h4 {
+    p {
       color: var(--Dark, #141414);
       font-feature-settings: "liga" off, "clig" off;
       font-family: Montserrat;
@@ -658,7 +658,7 @@ footer {
         line-height: 150%; /* 21px */
         opacity: 0.7;
       }
-      h5,
+      p,
       a {
         color: var(--White, #fff);
         text-align: center;

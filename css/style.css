@@ -240,7 +240,7 @@ header .lang:hover:hover svg path {
   max-width: 680px;
   margin-bottom: 40px;
 }
-.sect_timer h3 {
+.sect_timer p {
   color: var(--White, #fff);
   text-align: center;
   font-family: Montserrat;
@@ -328,7 +328,7 @@ header .lang:hover:hover svg path {
   max-width: 420px;
   padding-left: 12px;
 }
-.sect_form ul h4 {
+.sect_form ul p {
   color: var(--Dark, #141414);
   font-feature-settings: "liga" off, "clig" off;
   font-family: Montserrat;
@@ -647,7 +647,7 @@ footer .box .box_info h3 {
   line-height: 150%; /* 21px */
   opacity: 0.7;
 }
-footer .box .box_info h5,
+footer .box .box_info p,
 footer .box .box_info a {
   color: var(--White, #fff);
   text-align: center;
