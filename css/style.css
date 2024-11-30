@@ -240,7 +240,7 @@ header .lang:hover:hover svg path {
   max-width: 680px;
   margin-bottom: 40px;
 }
-.sect_timer h5 {
+.sect_timer h3 {
   color: var(--White, #fff);
   text-align: center;
   font-family: Montserrat;
@@ -328,7 +328,7 @@ header .lang:hover:hover svg path {
   max-width: 420px;
   padding-left: 12px;
 }
-.sect_form ul h5 {
+.sect_form ul h4 {
   color: var(--Dark, #141414);
   font-feature-settings: "liga" off, "clig" off;
   font-family: Montserrat;
@@ -636,7 +636,7 @@ footer .box .box_info {
   gap: 12px;
   min-height: 106px;
 }
-footer .box .box_info h4 {
+footer .box .box_info h3 {
   color: var(--White, #fff);
   text-align: center;
   font-feature-settings: "liga" off, "clig" off;
@@ -647,7 +647,7 @@ footer .box .box_info h4 {
   line-height: 150%; /* 21px */
   opacity: 0.7;
 }
-footer .box .box_info h6,
+footer .box .box_info h5,
 footer .box .box_info a {
   color: var(--White, #fff);
   text-align: center;
