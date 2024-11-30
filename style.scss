@@ -174,7 +174,7 @@ header {
     align-items: center;
     gap: 16px;
     margin-bottom: 24px;
-    h5 {
+    h4 {
       color: var(--White, #fff);
       font-family: Montserrat;
       font-size: 15px;
@@ -195,7 +195,7 @@ header {
     max-width: 680px;
     margin-bottom: 40px;
   }
-  h3 {
+  h5 {
     color: var(--White, #fff);
     text-align: center;
     font-family: Montserrat;
@@ -286,7 +286,7 @@ header {
     width: 100%;
     max-width: 420px;
     padding-left: 12px;
-    h6 {
+    h5 {
       color: var(--Dark, #141414);
       font-feature-settings: "liga" off, "clig" off;
       font-family: Montserrat;
@@ -590,7 +590,7 @@ footer {
       align-items: center;
       gap: 12px;
       min-height: 106px;
-      h5 {
+      h4 {
         color: var(--White, #fff);
         text-align: center;
         font-feature-settings: "liga" off, "clig" off;
@@ -614,7 +614,7 @@ footer {
       }
     }
   }
-  h4 {
+  .copy {
     color: var(--White, #fff);
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
@@ -643,6 +643,7 @@ footer {
 }
 body {
   position: relative;
+  overflow-x: hidden;
   .container {
     position: relative;
   }
@@ -674,4 +675,14 @@ body {
   bottom: 75px;
   right: 0px;
   z-index: 2;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

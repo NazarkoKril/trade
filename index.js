@@ -86,3 +86,56 @@
         });
     });
 })();
+
+// Mouse Move Animation Script
+(function () {
+    document.addEventListener('mousemove', (event) => {
+        const { clientX: mouseX, clientY: mouseY } = event;
+        const blueRound = document.querySelector('.blue_round');
+        const greenRound = document.querySelector('.green_round');
+
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        const moveFactor = 0.02;
+        const maxOffset = 40;
+
+        const offsetX = (mouseX - centerX) * moveFactor;
+        const offsetY = (mouseY - centerY) * moveFactor;
+
+        if (blueRound) {
+            blueRound.style.transform = `translate(${Math.min(offsetX, maxOffset)}px, ${Math.min(offsetY, maxOffset)}px) rotate(3.73deg)`;
+        }
+
+        if (greenRound) {
+            greenRound.style.transform = `translate(${Math.min(-offsetX, maxOffset)}px, ${Math.min(-offsetY, maxOffset)}px) rotate(3.73deg)`;
+        }
+    });
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .blue_round, .green_round {
+        transition: transform 0.1s ease-out;
+      }
+    `;
+    document.head.appendChild(style);
+})();
+
+// Fade-in Elements on Scroll Script
+(function () {
+    document.addEventListener("DOMContentLoaded", function () {
+        const fadeInElements = document.querySelectorAll('.fade-in');
+
+        const handleScroll = () => {
+            fadeInElements.forEach(function (element) {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+    });
+})();
