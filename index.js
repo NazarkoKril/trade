@@ -121,6 +121,7 @@
     document.head.appendChild(style);
 })();
 
+// slider
 
 (function () {
     document.addEventListener('DOMContentLoaded', () => {
