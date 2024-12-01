@@ -90,6 +90,9 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  .JP {
+    font-family: "Noto Sans JP" !important;
+  }
 }
 body {
   background-color: #020611;
@@ -918,6 +921,9 @@ body {
   }
   footer h2 {
     font-size: 22px;
+  }
+  .footer .link {
+    flex-wrap: wrap;
   }
   footer .link p {
     font-size: 16px;
