@@ -121,24 +121,6 @@
     document.head.appendChild(style);
 })();
 
-// Fade-in Elements on Scroll Script
-(function () {
-    document.addEventListener("DOMContentLoaded", function () {
-        const fadeInElements = document.querySelectorAll('.fade-in');
-
-        const handleScroll = () => {
-            fadeInElements.forEach(function (element) {
-                const rect = element.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                    element.classList.add('visible');
-                }
-            });
-        };
-
-        handleScroll();
-        window.addEventListener('scroll', handleScroll);
-    });
-})();
 
 (function () {
     document.addEventListener('DOMContentLoaded', () => {
