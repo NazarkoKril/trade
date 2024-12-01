@@ -907,8 +907,8 @@ body .container {
   footer h2 {
     font-size: 22px;
   }
-  .footer .link {
-    flex-wrap: wrap;
+  footer .link {
+    flex-direction: column;
   }
   footer .link p {
     font-size: 16px;
