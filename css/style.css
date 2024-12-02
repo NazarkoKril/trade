@@ -338,6 +338,9 @@ header .lang:hover:hover svg path {
   transform: translateY(-5px);
 }
 
+.sect_form {
+  padding-top: 130px;
+}
 .sect_form .box {
   background: var(--Geen-Lime, #9df501);
   position: relative;
@@ -572,7 +575,6 @@ header .lang:hover:hover svg path {
 }
 
 .sect_slide {
-  padding-top: 130px;
   overflow: hidden;
 }
 .sect_slide .grid4::-webkit-scrollbar {
