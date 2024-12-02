@@ -324,20 +324,63 @@ header {
     font-weight: 700;
     line-height: 96%;
   }
+  .btn-submit {
+    margin-top: 80px;
+    display: flex;
+    height: 56px;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--Dark, #141414);
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 18px */
+    border-radius: 8px;
+    background: var(--Geen-Lime, #9df501);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: var(--trans);
+    width: 100%;
+    max-width: 420px;
+    &:hover {
+      box-shadow: 0px 4px 28px 0px rgba(187, 255, 67, 0.2);
+      transform: translateY(-5px);
+    }
+  }
 }
 .sect_form {
   .box {
-    border-radius: 24px;
     background: var(--Geen-Lime, #9df501);
+    position: relative;
+    border-radius: 24px;
     padding: 64px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-image: url(../img/bg_form.svg);
-    background-position: center 0px;
-    background-repeat: no-repeat;
-    background-size: contain;
     gap: 15px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(../img/bg_form.svg);
+      background-position: center 0px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+      z-index: 0;
+    }
+  }
+  .box > * {
+    position: relative;
+    z-index: 1;
   }
   .left {
     width: 100%;
@@ -495,6 +538,7 @@ header {
     transition: var(--trans);
     &:hover {
       box-shadow: 0px 4px 28px 0px rgba(187, 255, 67, 0.2);
+      transform: translateY(-5px);
     }
   }
 }
@@ -699,15 +743,16 @@ footer {
     margin-bottom: 64px;
     .box_info {
       border-radius: 8px;
-      background: #0c101a;
+      background: #0b0f1a;
       width: 100%;
       max-width: 306px;
-      padding: 18px 30px;
+      padding: 15px 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: 12px;
-      min-height: 106px;
+      min-height: 125px;
       h3 {
         color: var(--White, #fff);
         text-align: center;
@@ -758,6 +803,7 @@ footer {
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
+  height: fit-content;
 }
 body {
   position: relative;
