@@ -574,6 +574,19 @@ header .lang:hover:hover svg path {
   line-height: 150%; /* 22.5px */
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .sect_slide {
   overflow: hidden;
 }

@@ -31,13 +31,13 @@
     updateCountdown();
 })();
 
-// Form Validation and Submission Script
 (function () {
     const submitButton = document.getElementById("submitButton");
     const nameField = document.getElementById("name");
     const emailField = document.getElementById("email");
     const formError = document.getElementById("formError");
     const popup = document.getElementById("popup");
+    const overlay = document.getElementById("overlay");
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     submitButton.addEventListener("click", function () {
@@ -69,9 +69,14 @@
         } else {
             popup.style.opacity = "1";
             popup.style.visibility = "visible";
+            overlay.style.opacity = "1";
+            overlay.style.visibility = "visible";
+
             setTimeout(() => {
                 popup.style.opacity = "0";
                 popup.style.visibility = "hidden";
+                overlay.style.opacity = "0";
+                overlay.style.visibility = "hidden";
             }, 2000);
 
             nameField.value = "";
